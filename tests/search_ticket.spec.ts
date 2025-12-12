@@ -10,7 +10,7 @@ test.describe('Searching the ticket train', () => {
         await searchPage.goto();
         await searchPage.inputDeparture('Gambir');
         await searchPage.inputDestination('Surabaya Gubeng');
-        await searchPage.departureDateInput('10-Desember-2025');
+        await searchPage.departureDateInput('15-Desember-2025');
         await searchPage.passengerInput('2');
         await searchPage.adultPassenger('1');
         await searchPage.tapCariPesanTicket();
@@ -24,7 +24,7 @@ test.describe('Searching the ticket train', () => {
         await searchPage.goto();
         await searchPage.inputDeparture('Gambir');
         await searchPage.inputDestination('Surabaya Gubeng');
-        await searchPage.departureDateInput('10-Desember-2025');
+        await searchPage.departureDateInput('15-Desember-2025');
         await searchPage.passengerInput('2');
         await searchPage.adultPassenger('1');
         await searchPage.tapCariPesanTicket();

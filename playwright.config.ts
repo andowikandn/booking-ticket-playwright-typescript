@@ -6,14 +6,17 @@ export default defineConfig({
     reporter: [['list'], ['html', { outputFolder: 'playwright-report' }]],
     use: {
         headless: true,
-        viewport: { width: 1280, height: 720 },
+        viewport: null,
+        launchOptions: {
+            args: ['--start-maximized'],
+        },
         ignoreHTTPSErrors: true,
         video: 'retain-on-failure',
         screenshot: 'only-on-failure',
     },
-    // projects: [
-    //     { name: 'chromium', use: { browserName: 'chromium' } },
-    //     { name: 'firefox', use: { browserName: 'firefox' } },
-    //     { name: 'webkit', use: { browserName: 'webkit' } },
-    // ],
+    projects: [
+        { name: 'chromium', use: { browserName: 'chromium' } },
+        { name: 'firefox', use: { browserName: 'firefox' } },
+        { name: 'webkit', use: { browserName: 'webkit' } },
+    ],
 });
