@@ -5,7 +5,7 @@ export default defineConfig({
     timeout: 30000,
     reporter: [['list'], ['html', { outputFolder: 'playwright-report' }]],
     use: {
-        headless: false,
+        headless: true,
         viewport: null,
         launchOptions: {
             args: ['--start-maximized'],
